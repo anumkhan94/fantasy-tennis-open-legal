@@ -12,7 +12,7 @@
         {
             "name": "Tennis for Beginners",
             "loadfromlocal": 0,
-            "slug_id": "tennisforbiginners",
+            "slug_id": "tennisforbeginners",
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/tennis-for-beginners.html"
         },
         {
