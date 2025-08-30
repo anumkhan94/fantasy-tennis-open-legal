@@ -1,17 +1,27 @@
 {
-  "fileversion": "1.0",
-  "androidappversion": "1.0.0",
-  "iosappversion": "1.0.0",
-  "staticpages": [
-    {
-      "name": "Rules",
-      "loadfromlocal": 0,
-      "pagelink": "https://ktilakraj.github.io/staticPages/rules.html"
-    },
-    {
-      "name": "Tennis for Beginners",
-      "loadfromlocal": 0,
-      "pagelink": "https://ktilakraj.github.io/staticPages/tennis-for-beginners.html"
-    }
-  ]
+    "fileversion": "1.0",
+    "androidappversion": "1.0.0",
+    "iosappversion": "1.0.0",
+    "staticpages": [
+        {
+            "name": "Rules",
+            "loadfromlocal": 0,
+            "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/rules.html"
+        },
+        {
+            "name": "Tennis for Beginners",
+            "loadfromlocal": 0,
+            "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/tennis-for-beginners.html"
+        },
+        {
+            "name": "Terms & Conditions",
+            "loadfromlocal": 0,
+            "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/terms%26conditions.html"
+        },
+        {
+            "name": "Privacy Policy",
+            "loadfromlocal": 0,
+            "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/privacypolicy.html"
+        }
+    ]
 }
