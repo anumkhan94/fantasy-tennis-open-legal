@@ -5,22 +5,26 @@
     "staticpages": [
         {
             "name": "Rules",
+            "slug_id": "rules",
             "loadfromlocal": 0,
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/rules.html"
         },
         {
             "name": "Tennis for Beginners",
             "loadfromlocal": 0,
+            "slug_id": "tennisforbiginners",
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/tennis-for-beginners.html"
         },
         {
             "name": "Terms & Conditions",
             "loadfromlocal": 0,
+            "slug_id": "termsandconditions",
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/terms%26conditions.html"
         },
         {
             "name": "Privacy Policy",
             "loadfromlocal": 0,
+            "slug_id": "privacypolicy",
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/privacypolicy.html"
         }
     ]
