@@ -1,0 +1,17 @@
+{
+  "fileversion": "1.0",
+  "androidappversion": "1.0.0",
+  "iosappversion": "1.0.0",
+  "staticpages": [
+    {
+      "name": "Rules",
+      "loadfromlocal": 0,
+      "pagelink": "https://ktilakraj.github.io/staticPages/rules.html"
+    },
+    {
+      "name": "Tennis for Beginners",
+      "loadfromlocal": 0,
+      "pagelink": "https://ktilakraj.github.io/staticPages/tennis-for-beginners.html"
+    }
+  ]
+}
