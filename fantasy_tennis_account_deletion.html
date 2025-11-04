@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Fantasy Tennis — Account Deletion Instructions</title>
+
+  <!-- Google fonts to approximate the original design -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --card-bg:#fafafa;
+      --muted:#6b6b6b;
+      --accent:#222;
+      --box:#f3f4f6;
+      --shadow: 0 6px 18px rgba(20,20,20,0.06);
+      --radius:10px;
+      --maxw:680px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      background:var(--bg);
+      font-family: 'Open Sans', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:48px 20px;
+      box-sizing:border-box;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card-bg);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:44px 56px;
+      box-sizing:border-box;
+      border:1px solid #eee;
+    }
+
+    h1{
+      font-family: 'Montserrat', 'Segoe UI', Roboto, Arial;
+      font-weight:700;
+      margin:0 0 6px 0;
+      font-size:34px;
+      letter-spacing:-0.02em;
+      text-align:center;
+    }
+
+    .subtitle{
+      display:block;
+      font-weight:600;
+      color:var(--muted);
+      text-align:center;
+      margin-bottom:18px;
+      font-size:16px;
+    }
+
+    .lead{
+      color:#444;
+      line-height:1.6;
+      margin:18px 0 22px 0;
+      font-size:15px;
+      text-align:left;
+    }
+
+    .box{
+      background:var(--box);
+      border-radius:8px;
+      padding:18px 20px;
+      margin:18px 0 22px 0;
+      border:1px solid #eee;
+    }
+
+    ol.steps{
+      margin:0;
+      padding-left:20px;
+      color:#222;
+      font-size:15px;
+      line-height:1.9;
+    }
+
+    ol.steps li{
+      margin:6px 0;
+    }
+
+    .note{
+      color:var(--muted);
+      font-size:14px;
+      line-height:1.6;
+      margin-bottom:18px;
+    }
+
+    hr.sep{
+      border:0;
+      border-top:1px solid #eee;
+      margin:22px 0;
+    }
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      font-size:13px;
+      padding-top:6px;
+    }
+
+    /* small screens */
+    @media (max-width:520px){
+      .card{padding:28px 20px; border-radius:8px}
+      h1{font-size:26px}
+      .lead{font-size:14px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="article" aria-labelledby="title">
+      <h1 id="title">Fantasy Tennis</h1>
+      <div class="subtitle">Account Deletion Instructions</div>
+
+      <p class="lead">To delete your Fantasy Tennis account and all associated data, please follow the simple steps inside our mobile application.</p>
+
+      <p class="lead">This process is done securely within the app to verify your identity before any data is removed.</p>
+
+      <div class="box" aria-label="Steps to delete account">
+        <ol class="steps">
+          <li>Open the <strong>Fantasy Tennis</strong> app on your mobile device</li>
+          <li>Navigate to your <strong>Profile</strong> or <strong>Account Settings</strong> page.</li>
+          <li>Find and tap on the <strong>"Delete Account"</strong> button</li>
+          <li>Confirm your decision in the pop-up prompt.</li>
+        </ol>
+      </div>
+
+      <p class="note">Once confirmed, your account will be marked for deletion and will no longer be accessible. This action will include your user profile, saved teams, and other associated information.</p>
+
+      <p class="note">If you have uninstalled the app, you will need to reinstall it to log in and access the account deletion feature.</p>
+
+      <hr class="sep" />
+      <footer>© 2024 Fantasy Tennis. All rights reserved.</footer>
+    </article>
+  </div>
+</body>
+</html>
