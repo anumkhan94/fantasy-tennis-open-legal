@@ -26,6 +26,12 @@
             "loadfromlocal": 0,
             "slug_id": "privacypolicy",
             "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/privacypolicy.html"
+        },
+        {
+            "name": "Contact Us",
+            "loadfromlocal": 0,
+            "slug_id": "contactus",
+            "pagelink": "https://anumkhan94.github.io/fantasy-tennis-open-legal/contactus.html"
         }
     ]
 }
