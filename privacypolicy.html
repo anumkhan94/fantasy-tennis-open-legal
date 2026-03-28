@@ -1,77 +1,204 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - Fantasy Tennis Open</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; max-width: 900px; }
-    h1, h2, h3 { color: #2c3e50; }
-  </style>
-</head>
-<body>
-  <h1>Privacy Policy for Fantasy Tennis Open App</h1>
-  <p><strong>Effective Date:</strong> 19-08-2025<br>
-  <strong>Last Updated:</strong> 19-08-2025</p>
+<style>
+    :root {
+        --bg-color: #f4f5f9; /* Light grey app background */
+        --card-bg: #ffffff; /* Clean white cards */
+        --accent-color: #219653; /* Your app's signature green */
+        --text-main: #1f2937; /* Dark text for high readability */
+        --text-muted: #4b5563; /* Softer grey for secondary text */
+        --border-color: #e5e7eb; /* Subtle dividers */
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-  <h2>1. Introduction</h2>
-  <p>This Privacy Policy explains how Fantasy Tennis Open (“App”, “we”, “our”, “us”) collects, uses, and protects your personal information. By using the App, you consent to the practices described herein.</p>
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-family);
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  <h2>2. Information We Collect</h2>
-  <ul>
-    <li><strong>Personal Information:</strong> Name, email address, age (if provided during registration).</li>
-    <li><strong>Usage Data:</strong> Device type, IP address, app usage statistics, location (if permitted).</li>
-    <li><strong>Cookies & Tracking:</strong> To improve functionality and serve relevant ads.</li>
-  </ul>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
 
-  <h2>3. How We Use Your Information</h2>
-  <ul>
-    <li>Provide and improve the App experience.</li>
-    <li>Maintain user accounts and gameplay features.</li>
-    <li>Ensure compliance with laws and prevent misuse.</li>
-    <li>Display location-appropriate ads (if ads are enabled).</li>
-    <li>Communicate updates, promotions, and policy changes.</li>
-  </ul>
+    h1, h2, h3 {
+        color: var(--accent-color);
+        margin-top: 1.5em;
+    }
 
-  <h2>4. Data Sharing</h2>
-  <p>We do not sell or rent your personal data. We may in future share limited data with:</p>
-  <ul>
-    <li>Service providers (analytics, hosting, ad networks).</li>
-    <li>Regulatory authorities if required by law.</li>
-    <li>Business partners in the event of mergers or acquisitions.</li>
-  </ul>
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
 
-  <h2>5. International Data Transfer</h2>
-  <p>Your information may be stored and processed on servers located outside your country. We take reasonable steps to protect your data in accordance with applicable laws (e.g., GDPR, CCPA).</p>
+    .card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow for light mode */
+    }
 
-  <h2>6. Data Retention</h2>
-  <p>We retain personal data only as long as necessary for providing services. You may request deletion of your account and associated data at any time.</p>
+    .card h3 {
+        margin-top: 0;
+        color: var(--text-main);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
 
-  <h2>7. Security</h2>
-  <p>We use reasonable measures (encryption, secure servers, restricted access) to protect your information. However, no system is 100% secure, and we cannot guarantee absolute security.</p>
+    .highlight {
+        color: var(--accent-color);
+        font-weight: bold;
+    }
 
-  <h2>8. Children’s Privacy</h2>
-  <p>The App is not intended for users under 18. We do not knowingly collect personal data from children. If we learn we have collected such data, it will be deleted.</p>
+    ul {
+        padding-left: 20px;
+    }
 
-  <h2>9. User Rights</h2>
-  <p>Depending on your region (e.g., EU, California, India), you may have rights to:</p>
-  <ul>
-    <li>Access the data we hold about you.</li>
-    <li>Request correction or deletion.</li>
-    <li>Opt out of data processing or marketing.</li>
-    <li>File a complaint with a data protection authority.</li>
-  </ul>
-  <p>Requests can be made at <a href="mailto:info@bitsoultech.com">info@bitsoultech.com</a>.</p>
+    li {
+        margin-bottom: 10px;
+        color: var(--text-muted);
+    }
 
-  <h2>10. Third-Party Ads & Links</h2>
-  <p>The App may include third-party ads and links. We are not responsible for the privacy practices of these third parties. Users should review the privacy policies of external sites before using them.</p>
+    strong {
+        color: var(--text-main);
+    }
 
-  <h2>11. Changes to Privacy Policy</h2>
-  <p>We may update this Privacy Policy periodically. Users will be notified of significant changes. Continued use of the App after updates constitutes acceptance.</p>
+    .score-progression {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-color);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-family: monospace;
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        border: 1px dashed var(--border-color);
+        overflow-x: auto;
+    }
 
-  <h2>12. Contact Us</h2>
-  <p>If you have questions about this Privacy Policy, contact us:<br>
-  📧 <a href="mailto:info@bitsoultech.com">info@bitsoultech.com</a><br>
-  📍 Lucknow, Uttar Pradesh, India</p>
-</body>
-</html>
+    /* Table styling for Rules page */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+
+    th {
+        background-color: rgba(33, 150, 83, 0.1); /* Light green tint for table header */
+        color: var(--accent-color);
+        font-weight: bold;
+    }
+
+    td {
+        color: var(--text-muted);
+    }
+    
+    .badge {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: #ffffff; /* White text on green badge */
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+</style>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+        Effective Date: 19-08-2025 | Last Updated: 19-08-2025
+    </p>
+
+    <h3>1. Introduction</h3>
+    <p>This Privacy Policy explains how Fantasy Tennis Open ("App", "we", "our", "us") collects, uses, and protects your personal information. By using the App, you consent to the practices described herein.</p>
+
+    <h3>2. Information We Collect</h3>
+    <p>We may collect:</p>
+    <ul>
+        <li><strong>Personal Information:</strong> Name, email address, age (if provided during registration).</li>
+        <li><strong>Usage Data:</strong> Device type, IP address, app usage statistics, location (if permitted).</li>
+        <li><strong>Cookies & Tracking:</strong> To improve functionality and serve relevant ads.</li>
+    </ul>
+
+    <h3>3. How We Use Your Information</h3>
+    <p>We use your information to:</p>
+    <ul>
+        <li>Provide and improve the App experience.</li>
+        <li>Maintain user accounts and gameplay features.</li>
+        <li>Ensure compliance with laws and prevent misuse.</li>
+        <li>Display location-appropriate ads (if ads are enabled).</li>
+        <li>Communicate updates, promotions, and policy changes.</li>
+    </ul>
+
+    <h3>4. Data Sharing</h3>
+    <p>We do not sell or rent your personal data. We may in future share limited data with:</p>
+    <ul>
+        <li><strong>Service providers</strong> (analytics, hosting, ad networks).</li>
+        <li><strong>Regulatory authorities</strong> if required by law.</li>
+        <li><strong>Business partners</strong> in the event of mergers or acquisitions.</li>
+    </ul>
+
+    <h3>5. International Data Transfer</h3>
+    <p>Your information may be stored and processed on servers located outside your country. We take reasonable steps to protect your data in accordance with applicable laws (e.g., GDPR, CCPA).</p>
+
+    <h3>6. Data Retention</h3>
+    <ul>
+        <li>We retain personal data only as long as necessary for providing services.</li>
+        <li>You may request deletion of your account and associated data at any time.</li>
+    </ul>
+
+    <h3>7. Security</h3>
+    <p>We use reasonable measures (encryption, secure servers, restricted access) to protect your information. However, no system is 100% secure, and we cannot guarantee absolute security.</p>
+
+    <h3>8. Children's Privacy</h3>
+    <p>The App is not intended for users under 18. We do not knowingly collect personal data from children. If we learn we have collected such data, it will be deleted.</p>
+
+    <h3>9. User Rights</h3>
+    <p>Depending on your region (e.g., EU, California, India), you may have rights to:</p>
+    <ul>
+        <li>Access the data we hold about you.</li>
+        <li>Request correction or deletion.</li>
+        <li>Opt out of data processing or marketing.</li>
+        <li>File a complaint with a data protection authority.</li>
+    </ul>
+    <p>Requests can be made at <a href="mailto:info@bitsoultech.com" style="color: var(--accent-color);">info@bitsoultech.com</a>.</p>
+
+    <h3>10. Third-Party Ads & Links</h3>
+    <ul>
+        <li>The App may include third-party ads and links. We are not responsible for the privacy practices of these third parties.</li>
+        <li>Users should review the privacy policies of external sites before using them.</li>
+    </ul>
+
+    <h3>11. Changes to Privacy Policy</h3>
+    <p>We may update this Privacy Policy periodically. Users will be notified of significant changes. Continued use of the App after updates constitutes acceptance.</p>
+
+    <h3>12. Contact Us</h3>
+    <p>If you have questions about this Privacy Policy, contact us:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@fantasytennisopen.com" style="color: var(--accent-color);">support@fantasytennisopen.com</a></li>
+        <li><strong>Location:</strong> Lucknow, Uttar Pradesh, India.</li>
+    </ul>
+</div>

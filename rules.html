@@ -1,155 +1,251 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <!--<title>Fantasy Tennis Rules</title>-->
-  <style>
-    body {
-      font-family: sans-serif;
-      padding: 1rem;
-      background: #f9f9f9;
-      color: #333;
-    }
-    h1, h2 {
-      color: #4A148C;
-    }
-    h2 {
-      margin-top: 2rem;
-    }
-    ul {
-      padding-left: 1.2rem;
-    }
-    .section {
-      margin-bottom: 2rem;
-    }
-    .bonus {
-      font-weight: bold;
-      color: #1B5E20;
-    }
-  </style>
-
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      padding: 2rem;
-      background: linear-gradient(to bottom, #fdfbfb, #ebedee);
-      color: #333;
-      line-height: 1.7;
+<style>
+    :root {
+        --bg-color: #f4f5f9; /* Light grey app background */
+        --card-bg: #ffffff; /* Clean white cards */
+        --accent-color: #219653; /* Your app's signature green */
+        --text-main: #1f2937; /* Dark text for high readability */
+        --text-muted: #4b5563; /* Softer grey for secondary text */
+        --border-color: #e5e7eb; /* Subtle dividers */
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
-    h1, h2 {
-      color: #512DA8;
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-family);
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+
+    h1, h2, h3 {
+        color: var(--accent-color);
+        margin-top: 1.5em;
     }
 
     h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
     }
 
-    h2 {
-      margin-top: 2rem;
-      font-size: 1.5rem;
-      border-bottom: 2px solid #D1C4E9;
-      padding-bottom: 0.5rem;
+    .card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow for light mode */
+    }
+
+    .card h3 {
+        margin-top: 0;
+        color: var(--text-main);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
+
+    .highlight {
+        color: var(--accent-color);
+        font-weight: bold;
     }
 
     ul {
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
+        padding-left: 20px;
     }
 
     li {
-      margin-bottom: 0.5rem;
-    }
-
-    .bonus {
-      font-weight: bold;
-      color: #2E7D32;
-    }
-
-    p {
-      margin-top: 1rem;
+        margin-bottom: 10px;
+        color: var(--text-muted);
     }
 
     strong {
-      color: #000;
+        color: var(--text-main);
     }
 
-    .footer {
-      margin-top: 3rem;
-      font-weight: bold;
-      color: #4A148C;
+    .score-progression {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-color);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-family: monospace;
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        border: 1px dashed var(--border-color);
+        overflow-x: auto;
     }
-  </style>
 
-</head>
-<body>
+    /* Table styling for Rules page */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
 
-  <h1>Welcome to the Fantasy Court: Your Guide to Grand Slam Glory</h1>
-  <p>
-    Tired of just watching from the sidelines? Think you know who's going to serve up a storm and who's going to crumble under pressure? Now’s your chance to prove it.
-  </p>
-  <p>
-    Welcome to Fantasy Tennis Open, where you’re the coach. You draft the players, you call the shots, and you climb the leaderboard to become the ultimate fantasy tennis GOAT.
-  </p>
-  <p>Ready? Game, Set, Match!</p>
+    th {
+        background-color: rgba(33, 150, 83, 0.1); /* Light green tint for table header */
+        color: var(--accent-color);
+        font-weight: bold;
+    }
 
-  <h2>Step 1: The Pre-Match Huddle (Drafting Your Squad)</h2>
-  <ul>
-    <li><strong>Join the Action:</strong> Choose a tournament in the lobby. Participation closes when the tournament starts.</li>
-    <li><strong>Build Your Roster:</strong> Use a fantasy salary cap (e.g., ₹50,00,000) to pick ATP and WTA stars.</li>
-    <li><strong>Play the Angles:</strong> Top seeds or dark horses? Balance is key!</li>
-  </ul>
+    td {
+        color: var(--text-muted);
+    }
+    
+    .badge {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: #ffffff; /* White text on green badge */
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+</style>
 
-  <h2>Step 2: The Rally (How Your Players Score Points)</h2>
-  <ul>
-    <li>Ace: <span class="bonus">+2 pts</span></li>
-    <li>Break of Serve: <span class="bonus">+5 pts</span></li>
-    <li>Double Fault: <span class="bonus">-1 pt</span></li>
-    <li>Unforced Error: <span class="bonus">-0.5 pts</span></li>
-  </ul>
+<div class="container">
+    <h1>How to Play FTO</h1>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+        Tired of just watching from the sidelines? Think you know who's going to serve up a storm and who's going to crumble under pressure? Now's your chance to prove it. Welcome to Fantasy Tennis Open, where you're the coach. You draft the players, you call the shots, and you climb the leaderboard to become the ultimate fantasy tennis GOAT. Ready? Game, Set, Match!
+    </p>
 
-  <p><strong>Match Result Bonuses:</strong></p>
-  <ul>
-    <li>Win a Set: <span class="bonus">+3 pts</span></li>
-    <li>Win in Straight Sets: <span class="bonus">+10 pts</span></li>
-    <li>Win the Match: <span class="bonus">+10 pts</span></li>
-  </ul>
+    <div class="card">
+        <h3>Step 1: The Pre-Match Huddle (Drafting Your Squad)</h3>
+        <p>Your first serve is to build your dream team for the opening rounds.</p>
+        <ul>
+            <li><strong>Join the Action:</strong> Head to the lobby and choose a tournament to enter. From daily matches to entire Grand Slams, the choice is yours. Remember, once the tournament starts, the participation will be closed.</li>
+            <li><strong>Build Your Roster:</strong> You'll get a fantasy salary cap (e.g., ₹50,00,000) to draft your squad of ATP and WTA stars.</li>
+            <li><strong>Play the Angles:</strong> Will you spend big on a top seed like Alcaraz or Sabalenka, or will you find value in a dark horse, a qualifier with a killer backhand ready for an upset? A balanced team is key to surviving the early rounds.</li>
+        </ul>
+    </div>
 
-  <p><strong>Special Bonuses:</strong></p>
-  <ul>
-    <li>Clean Sweep (6–0 Set): <span class="bonus">+5 pts</span></li>
-    <li>Underdog Upset: <span class="bonus">+15 pts</span></li>
-  </ul>
+    <div class="card">
+        <h3>Step 2: The Rally (How Your Players Score Points)</h3>
+        <p>This is where the match is won or lost. Every ace, every break point, and every match victory earns points for your fantasy squad.</p>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Action</th>
+                    <th>Points</th>
+                    <th>Tennis Talk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td colspan="3" style="background-color: var(--bg-color); color: var(--accent-color); font-weight: bold; text-align: center;">On-Court Dominance</td>
+                </tr>
+                <tr>
+                    <td><strong>Ace</strong></td>
+                    <td>+2 Pts</td>
+                    <td>A perfect serve. Unreturnable. Pure gold.</td>
+                </tr>
+                <tr>
+                    <td><strong>Break of Serve</strong></td>
+                    <td>+5 Pts</td>
+                    <td>Stealing your opponent's serve? That's a power move.</td>
+                </tr>
+                <tr>
+                    <td><strong>Double Fault</strong></td>
+                    <td>-1 Pt</td>
+                    <td>A costly error. Keep these to a minimum.</td>
+                </tr>
+                <tr>
+                    <td><strong>Unforced Error</strong></td>
+                    <td>-0.5 Pts</td>
+                    <td>Points you don't want to give away.</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-color: var(--bg-color); color: var(--accent-color); font-weight: bold; text-align: center;">Winning the Battle</td>
+                </tr>
+                <tr>
+                    <td><strong>Win a Set</strong></td>
+                    <td>+3 Pts</td>
+                    <td>One step closer to victory.</td>
+                </tr>
+                <tr>
+                    <td><strong>Win in Straight Sets</strong></td>
+                    <td>+10 Pts (Bonus)</td>
+                    <td>Total domination. A flawless performance.</td>
+                </tr>
+                <tr>
+                    <td><strong>Win the Match</strong></td>
+                    <td>+10 Pts</td>
+                    <td>The ultimate goal. Sealing the deal.</td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="background-color: var(--bg-color); color: var(--accent-color); font-weight: bold; text-align: center;">Bonus Points</td>
+                </tr>
+                <tr>
+                    <td><strong>Clean Sweep (6-0 Set)</strong></td>
+                    <td>+5 Pts (Bonus)</td>
+                    <td>Serving up a "bagel." The ultimate flex.</td>
+                </tr>
+                <tr>
+                    <td><strong>Underdog Upset</strong></td>
+                    <td>+15 Pts (Bonus)</td>
+                    <td>When your low-ranked player topples a giant. Hello, upset!</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
-  <h2>Step 3: Second Serve (Quarter-Final Reset)</h2>
-  <ul>
-    <li><strong>When:</strong> After Round 4, before Quarter-Finals.</li>
-    <li><strong>What:</strong> Draft a new team from remaining players.</li>
-    <li><strong>Why:</strong> A fresh start if your original picks are out.</li>
-  </ul>
+    <div class="card">
+        <h3>Step 3: Second Serve (The Quarter-Final Reset)</h3>
+        <p>The tournament is heating up, and only the best remain. This is your chance to change your strategy for the final rounds!</p>
+        
 
-  <h2>Step 4: Coming Soon (The Champion’s Advantage)</h2>
-  <p>
-    Pick a <strong>Champion</strong> from your squad. Their points will be multiplied. This is coming soon!
-  </p>
+[Image of a tennis tournament bracket]
 
-  <h2>Step 5: Championship Point (Winning It All)</h2>
-  <ul>
-    <li>Live scoring updates during the tournament</li>
-    <li>Top scorer at the end wins! Prizes may apply</li>
-  </ul>
+        <ul>
+            <li><strong>When it Happens:</strong> After Round 4 is complete and before the Quarter-Finals begin.</li>
+            <li><strong>What You Do:</strong> You get to completely reset your team. Your initial squad is wiped clean.</li>
+            <li><strong>The New Challenge:</strong> You must draft a new squad, but you can only choose from the players who have made it to the Quarter-Finals. Did your initial picks get knocked out early? No problem. This is your second serve to build a championship-winning team for the home stretch.</li>
+        </ul>
+    </div>
 
-  <h2>Coach’s Corner: Pro Tips</h2>
-  <ul>
-    <li>Check the Surface: Grass vs Clay vs Hard court matters</li>
-    <li>Analyse the Draw: Smooth path or early exit?</li>
-    <li>Watch for Injuries: Stay updated</li>
-    <li>Diversify Your Picks: Don’t rely on one favorite</li>
-  </ul>
+    <div class="card">
+        <h3>Step 4: Coming Soon (The Champion's Advantage) <span class="badge">Coming Soon</span></h3>
+        <p>Get ready for a new layer of strategy! We're hard at work on our next big feature: the Champion selection. Soon, you'll be able to nominate one player from your squad whose points will be multiplied. Choosing the right Champion could be the masterstroke that wins you the entire tournament. Stay tuned for this game-changing update!</p>
+    </div>
 
-  <p><strong>You're all set. The ball is in your court. Head to the lobby, draft your squad, and show everyone your tennis genius!</strong></p>
+    <div class="card">
+        <h3>Step 5: Championship Point (Winning It All)</h3>
+        <p>As the real-world matches unfold, your fantasy score updates in real-time. Follow along live, watch your players rally, and track your rank on the leaderboard.</p>
+        <p>The user with the most points at the end of the tournament is crowned the winner. You'll earn bragging rights, and depending on the contest, some amazing prizes!</p>
+    </div>
 
-</body>
-</html>
+    <div class="card">
+        <h3>Coach's Corner: Pro Tips for New Players</h3>
+        <ul>
+            <li><strong>Check the Surface:</strong> A clay court specialist might not be the same beast on Wimbledon's grass. Pay attention to player strengths.</li>
+            <li><strong>Analyse the Draw:</strong> Does your player have a smooth path, or are they slated to face a top seed early? Plan for both your initial draft and your Quarter-Final reset.</li>
+            <li><strong>Watch for Injuries:</strong> Stay updated with the latest news. An unexpected withdrawal can sink your squad before it even starts.</li>
+            <li><strong>Diversify Your Picks:</strong> Don't put all your money on favourites in the early rounds. A surprise upset can bring massive bonus points. Find the hidden gems!</li>
+        </ul>
+        <p style="margin-top: 15px;"><strong>You're all set. The ball is in your court. Head to the lobby, draft your squad, and show everyone your tennis genius!</strong></p>
+    </div>
+</div>

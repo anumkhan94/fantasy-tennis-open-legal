@@ -1,88 +1,234 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terms & Conditions - Fantasy Tennis Open</title>
-  <style>
-    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; max-width: 900px; }
-    h1, h2, h3 { color: #2c3e50; }
-  </style>
-</head>
-<body>
-  <h1>Terms & Conditions for Fantasy Tennis Open</h1>
-  <p><strong>Effective Date:</strong> 19-08-2025<br>
-  <strong>Last Updated:</strong> 19-08-2025</p>
+<style>
+    :root {
+        --bg-color: #f4f5f9; /* Light grey app background */
+        --card-bg: #ffffff; /* Clean white cards */
+        --accent-color: #219653; /* Your app's signature green */
+        --text-main: #1f2937; /* Dark text for high readability */
+        --text-muted: #4b5563; /* Softer grey for secondary text */
+        --border-color: #e5e7eb; /* Subtle dividers */
+        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
 
-  <h2>1. Introduction</h2>
-  <p>Welcome to Fantasy Tennis Open (“App”). By downloading, accessing, or using this App, you agree to be bound by these Terms and Conditions (“Terms”). If you do not agree, please stop using the App.</p>
-  <p>These Terms apply to all users worldwide. Some sections may include region-specific notices depending on applicable laws.</p>
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-main);
+        font-family: var(--font-family);
+        line-height: 1.6;
+        margin: 0;
+        padding: 20px;
+        -webkit-font-smoothing: antialiased;
+    }
 
-  <h2>2. Nature of the App</h2>
-  <p>The App is a skill-based fantasy sports platform, designed for entertainment and engagement. Users create virtual teams of real-world tennis players and earn points based on actual player performances in professional matches.</p>
-  <p>The App does not facilitate gambling, betting, or wagering of real money. Leaderboards, rankings, and badges are for entertainment and recognition only, and have no monetary value.</p>
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
 
-  <h2>3. Eligibility</h2>
-  <p>You must be at least 18 years of age (or the minimum age of digital consent in your country) to use the App. By using the App, you confirm that you are legally permitted to participate under your local laws.</p>
-  <p>The Service is not directed to or intended for children under 18. If you are under 18, you must not use the Service. By creating an account, you represent and warrant that you meet these eligibility requirements.</p>
+    h1, h2, h3 {
+        color: var(--accent-color);
+        margin-top: 1.5em;
+    }
 
-  <h2>4. Regional Restrictions</h2>
-  <p>The legality of fantasy sports varies across countries and regions. Users are responsible for ensuring compliance with their local laws.</p>
-  <ul>
-    <li><strong>India:</strong> The App is not available to residents of Telangana, Assam, Andhra Pradesh, Odisha, Nagaland, Sikkim, and Meghalaya.</li>
-    <li><strong>United States:</strong> Some states may regulate or prohibit fantasy sports; users must comply with local laws.</li>
-    <li><strong>Middle East / Other Restricted Countries:</strong> Use of the App is prohibited where fantasy sports or skill-based games are banned.</li>
-  </ul>
-  <p>The App may restrict or block access based on user location to comply with regional regulations.</p>
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        border-bottom: 2px solid var(--border-color);
+        padding-bottom: 15px;
+        margin-bottom: 30px;
+    }
 
-  <h2>5. Account Registration</h2>
-  <p>Users may need to register an account with accurate details. You are responsible for maintaining the confidentiality of your account credentials. The App reserves the right to suspend or terminate accounts that provide false information or violate these Terms.</p>
-  <p>Each individual is permitted to operate only one account. Operating multiple accounts is a violation of these Terms and will result in the termination of all associated accounts.</p>
-  <p>You are responsible for all activities that occur under your account. You must notify us immediately of any unauthorized use.</p>
+    .card {
+        background-color: var(--card-bg);
+        border-radius: 12px;
+        padding: 20px;
+        margin-bottom: 20px;
+        border: 1px solid var(--border-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Softer shadow for light mode */
+    }
 
-  <h2>6. Gameplay & Leaderboards</h2>
-  <p>Gameplay is designed for entertainment only. The scoring system is based on publicly available match statistics. The App reserves the right to adjust rules, scoring, and features without prior notice.</p>
+    .card h3 {
+        margin-top: 0;
+        color: var(--text-main);
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: 10px;
+    }
 
-  <h2>7. Intellectual Property</h2>
-  <p>All content, branding, software, design, and logos in the App are owned by or licensed to <strong>BitSoul Techno Solutions Private Limited</strong>. Users may not copy, distribute, modify, or exploit the App or its content without prior written consent.</p>
+    .highlight {
+        color: var(--accent-color);
+        font-weight: bold;
+    }
 
-  <h2>8. User Conduct</h2>
-  <p>You agree not to:</p>
-  <ul>
-    <li>Use the App for illegal, fraudulent, or unauthorized purposes.</li>
-    <li>Attempt to hack, disrupt, reverse-engineer or decompile any part of the Service.</li>
-    <li>Create multiple accounts for manipulation or unfair advantage.</li>
-    <li>Upload offensive, defamatory, or harmful content.</li>
-    <li>Harass, abuse, or harm another person or group.</li>
-    <li>Cheat, collude with others, or use unauthorized methods (including bots or automation) to gain an unfair advantage.</li>
-  </ul>
-  <p>Violation may result in suspension or termination of your account.</p>
+    ul {
+        padding-left: 20px;
+    }
 
-  <h2>9. Privacy & Data</h2>
-  <p>We collect, process, and store user data in accordance with our Privacy Policy. Data may be stored and processed on servers outside your country. By using the App, you consent to such collection and processing.</p>
-  <p>We may update our Privacy Policy periodically. Users will be notified of significant changes. Continued use of the App after updates constitutes acceptance.</p>
+    li {
+        margin-bottom: 10px;
+        color: var(--text-muted);
+    }
 
-  <h2>10. Ads & Third-Party Services</h2>
-  <p>The App may display third-party ads based on user location and preferences. We are not responsible for the content, availability, accuracy, or safety of third-party ads or services nor for any damages or losses incurred through them.</p>
+    strong {
+        color: var(--text-main);
+    }
 
-  <h2>11. Indemnification</h2>
-  <p>You agree to indemnify and hold harmless Fantasy Tennis Open, its owners, its employees, directors, and agents from any claims, damages, obligations, losses, liabilities, costs, or expenses arising from your use of the Service, or your violation of these Terms.</p>
+    .score-progression {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--bg-color);
+        padding: 15px;
+        border-radius: 8px;
+        margin: 15px 0;
+        font-family: monospace;
+        font-size: 1.1rem;
+        color: var(--accent-color);
+        border: 1px dashed var(--border-color);
+        overflow-x: auto;
+    }
 
-  <h2>12. Limitation of Liability</h2>
-  <p>The App is provided on an “as is” basis, without warranties of any kind. <strong>BitSoul Techno Solutions Private Limited</strong> shall not be liable for any indirect, incidental, or consequential damages arising from the use of the App. The App does not guarantee uninterrupted or error-free operation.</p>
+    /* Table styling for Rules page */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        background-color: var(--bg-color);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th, td {
+        padding: 12px;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
 
-  <h2>13. Termination</h2>
-  <p>We may suspend, restrict, or terminate your access without prior notice if you: Breach these Terms, Misuse the App, or Violate local laws.</p>
+    th {
+        background-color: rgba(33, 150, 83, 0.1); /* Light green tint for table header */
+        color: var(--accent-color);
+        font-weight: bold;
+    }
 
-  <h2>14. Governing Law</h2>
-  <p>These Terms shall be governed by the laws of India, except where local laws require otherwise. Users outside this jurisdiction may be subject to local consumer protection laws.</p>
+    td {
+        color: var(--text-muted);
+    }
+    
+    .badge {
+        display: inline-block;
+        background-color: var(--accent-color);
+        color: #ffffff; /* White text on green badge */
+        padding: 2px 8px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+</style>
 
-  <h2>15. Changes to Terms</h2>
-  <p>We reserve the right to amend these Terms at any time. Users will be notified of material changes through in-app notifications or other means. Continued use of the App implies acceptance of the updated Terms.</p>
+<div class="container">
+    <h1>Terms & Conditions</h1>
+    <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">
+        Effective Date: 19-08-2025 | Last Updated: 19-08-2025
+    </p>
 
-  <h2>16. Contact Us</h2>
-  <p>If you have any questions about these Terms, please contact us at:<br>
-  📧 <a href="mailto:info@bitsoultech.com">info@bitsoultech.com</a><br>
-  📍 Lucknow, Uttar Pradesh, India</p>
-</body>
-</html>
+    <h3>1. Introduction</h3>
+    <p>Welcome to Fantasy Tennis Open ("App"). By downloading, accessing, or using this App, you agree to be bound by these Terms and Conditions ("Terms"). If you do not agree, please stop using the App.</p>
+    <p>These Terms apply to all users worldwide. Some sections may include region-specific notices depending on applicable laws.</p>
+
+    <h3>2. Nature of the App</h3>
+    <ul>
+        <li>The App is a skill-based fantasy sports platform, designed for entertainment and engagement.</li>
+        <li>Users create virtual teams of real-world tennis players and earn points based on actual player performances in professional matches.</li>
+        <li>The App does not facilitate gambling, betting, or wagering of real money.</li>
+        <li>Leaderboards, rankings, and badges are for entertainment and recognition only, and have no monetary value.</li>
+    </ul>
+
+    <h3>3. Eligibility</h3>
+    <ul>
+        <li>You must be at least 18 years of age (or the minimum age of digital consent in your country) to use the App.</li>
+        <li>By using the App, you confirm that you are legally permitted to participate under your local laws.</li>
+    </ul>
+
+    <h3>4. Regional Restrictions</h3>
+    <p>The legality of fantasy sports varies across countries and regions. Users are responsible for ensuring compliance with their local laws.</p>
+    <ul>
+        <li><strong>India:</strong> The App is not available to residents of Telangana, Assam, Andhra Pradesh, Odisha, Nagaland, Sikkim, and Meghalaya.</li>
+        <li><strong>United States:</strong> Some states may regulate or prohibit fantasy sports; users must comply with local laws.</li>
+        <li><strong>Middle East / Other Restricted Countries:</strong> Use of the App is prohibited where fantasy sports or skill-based games are banned.</li>
+    </ul>
+    <p>The App may restrict or block access based on user location to comply with regional regulations.</p>
+
+    <h3>5. Account Registration</h3>
+    <ul>
+        <li>Users may need to register an account with accurate details.</li>
+        <li>You are responsible for maintaining the confidentiality of your account credentials.</li>
+        <li>The App reserves the right to suspend or terminate accounts that provide false information or violate these Terms.</li>
+    </ul>
+
+    <h3>6. Gameplay & Leaderboards</h3>
+    <ul>
+        <li>Gameplay is designed for entertainment only.</li>
+        <li>The scoring system is based on publicly available match statistics.</li>
+        <li>The App reserves the right to adjust rules, scoring, and features without prior notice.</li>
+    </ul>
+
+    <h3>7. Intellectual Property</h3>
+    <ul>
+        <li>All content, branding, software, design, and logos in the App are owned by or licensed to BitSoul Techno Solutions Private Limited.</li>
+        <li>Users may not copy, distribute, modify, or exploit the App or its content without prior written consent.</li>
+    </ul>
+
+    <h3>8. User Conduct</h3>
+    <p>You agree not to:</p>
+    <ul>
+        <li>Use the App for illegal, fraudulent, or unauthorized purposes.</li>
+        <li>Attempt to hack, disrupt, or reverse-engineer the App.</li>
+        <li>Create multiple accounts for manipulation or unfair advantage.</li>
+        <li>Upload offensive, defamatory, or harmful content.</li>
+    </ul>
+
+    <h3>9. Privacy & Data</h3>
+    <ul>
+        <li>We collect, process, and store user data in accordance with our Privacy Policy.</li>
+        <li>Data may be stored and processed on servers outside your country.</li>
+        <li>By using the App, you consent to such collection and processing.</li>
+    </ul>
+
+    <h3>10. Ads & Third-Party Services</h3>
+    <ul>
+        <li>The App may display third-party ads based on user location and preferences.</li>
+        <li>We are not responsible for the content, accuracy, or safety of third-party ads or services.</li>
+    </ul>
+
+    <h3>11. Limitation of Liability</h3>
+    <ul>
+        <li>The App is provided on an "as is" basis, without warranties of any kind.</li>
+        <li>BitSoul Techno Solutions Private Limited shall not be liable for any indirect, incidental, or consequential damages arising from the use of the App.</li>
+        <li>The App does not guarantee uninterrupted or error-free operation.</li>
+    </ul>
+
+    <h3>12. Termination</h3>
+    <p>We may suspend, restrict, or terminate your access if you:</p>
+    <ul>
+        <li>Breach these Terms,</li>
+        <li>Misuse the App, or</li>
+        <li>Violate local laws.</li>
+    </ul>
+
+    <h3>13. Governing Law</h3>
+    <ul>
+        <li>These Terms shall be governed by the laws of India, except where local laws require otherwise.</li>
+        <li>Users outside this jurisdiction may be subject to local consumer protection laws.</li>
+    </ul>
+
+    <h3>14. Changes to Terms</h3>
+    <p>We may update these Terms from time to time. Users will be notified of material changes through in-app notifications or other means. Continued use of the App implies acceptance of the updated Terms.</p>
+
+    <h3>15. Contact Us</h3>
+    <p>If you have any questions about these Terms, please contact us at:</p>
+    <ul>
+        <li><strong>Email:</strong> <a href="mailto:support@fantasytennisopen.com" style="color: var(--accent-color);">support@fantasytennisopen.com</a></li>
+        <li><strong>Location:</strong> Lucknow, Uttar Pradesh, India.</li>
+    </ul>
+</div>
